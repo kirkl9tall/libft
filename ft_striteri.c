@@ -12,15 +12,6 @@
 
 #include "libft.h"
 
-
-/*void to_upper(unsigned int index, char *c)
-{
-	int	x;
-	int	x;
-
-	if (*c >= 'a' && *c <= 'z')
-		*c -= 32;
-}*/
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	x = 0;

@@ -12,7 +12,6 @@
 
 #include "libft.h"
 
-
 void	del(void *pointer)
 {
 	free(((t_list *)pointer)->content);
