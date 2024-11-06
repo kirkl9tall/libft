@@ -6,7 +6,7 @@
 /*   By: abismail <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:56:49 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/06 13:59:45 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/06 21:04:37 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		deb;
 	int		fini;
-	int		x;
 	int		y;
 	char	*p;
 	int		sl;
@@ -82,11 +81,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (sl > 0)
 		p = malloc(fini - deb + 1);
 	p = malloc(1);
-	x = 0;
+	sl = 0;
 	y = deb;
 	while (y < fini)
-		p[x++] = s1[y++];
-	p[x] = '\0';
+		p[sl++] = s1[y++];
+	p[sl] = '\0';
 	return ((char *)p);
 }
 /*
