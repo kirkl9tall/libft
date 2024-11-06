@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abismail <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/06 11:56:49 by abismail          #+#    #+#             */
+/*   Updated: 2024/11/06 11:56:49 by abismail         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -49,20 +60,15 @@ char	**amar(char *s, char **p, char c)
 	p[z] = '\0';
 	return (p);
 }
-
-char	**ft_split(char const *s, char c)
+void	allocation(char const *s, void **p, char c)
 {
-	char	**p;
-	int		x;
-	int		y;
-	int		w;
-	int		count;
+	int	x;
+	int	y;
+	int	w;
 
 	x = 0;
 	y = 0;
 	w = 0;
-	count = count_word(s, c);
-	p = malloc((count_word(s, c) + 1) * sizeof(char *));
 	while (s[x])
 	{
 		while (s[x] && s[x] != c)
@@ -76,7 +82,18 @@ char	**ft_split(char const *s, char c)
 		y++;
 		w = 0;
 	}
-	return (amar(s, p, c));
+}
+char	**ft_split(char const *s, char c)
+{
+	char	**p;
+
+	p = malloc((count_word(s, c) + 1) * sizeof(char *));
+	if (p == NULL)
+		return (NULL);
+	allocation(s, p, c);
+	if (allocation == NULL)
+		//////////////////////////-------------- freee alllocation if somnthing went wrong !!!!!! ;
+		return (amar(s, p, c));
 }
 
 int	main(void)
