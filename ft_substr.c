@@ -6,28 +6,28 @@
 /*   By: abismail <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:56:49 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/06 11:56:49 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/06 13:19:46 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*p;
 	int		x;
 	int		y;
+	int		ls;
 
+	ls = ft_strlen(s);
 	x = start;
 	y = 0;
-	p = malloc(len + 1);
-	if (p == NULL || start > strlen(s))
+	if (!s || len == 0)
 		return (NULL);
-	while (y < len && ((start + y) < (strlen(s))))
-	// a revoir  the second condition .
+	p = malloc(len + 1);
+	if (p == NULL || start >= ls)
+		return (NULL);
+	while (y < len && ((start + y) < ls))
 	{
 		p[y] = s[x];
 		x++;
@@ -39,8 +39,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 /*
 int main ()
 {
-	char  arr[] = "abcdefjhijk";
+	char  arr[] = "";
 	int srart = 8;
-	int len  = 8;
+	int len  = 5;
 	printf("%s\n",ft_substr(arr,srart,len));
+
 }*/

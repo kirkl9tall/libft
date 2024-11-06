@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
-#include <unistd.h>
+#include "libft.h"
 
 void	putstr_fd(char *str, int fd)
 {
@@ -24,6 +23,7 @@ void	putstr_fd(char *str, int fd)
 /*
 int	main(void)
 {
+
 char	s[] = "said";
 int		df = open ("abdo.txt", O_WRONLY);
 putstr_fd(s, df);

@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// void del(void* pointer)
-// {
-//     free(((t_list*)pointer)->content);
-// }
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

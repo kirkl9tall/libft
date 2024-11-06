@@ -6,14 +6,11 @@
 /*   By: abismail <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:56:49 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/06 11:56:49 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/06 13:59:45 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 static int	check(const char str, const char c)
 {
@@ -52,7 +49,7 @@ static int	fin(char const *s1, char const *set)
 	int	z;
 
 	y = 0;
-	z = (strlen(s1) - 1);
+	z = (ft_strlen(s1) - 1);
 	while (z > 0)
 	{
 		while (set[y])
@@ -80,8 +77,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		sl;
 
 	deb = debut(s1, set);
-	//     fini = 0;
-	//    if ( debut < strlen(s1 ) -1)
 	fini = fin(s1, set);
 	sl = fini - deb;
 	if (sl > 0)

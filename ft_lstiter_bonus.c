@@ -10,11 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*void (*f)(void *head)
-{
-	while (head->next != NULL)
-		head = head->next;
-}*/
+#include "libft.h"
+
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst != NULL)
