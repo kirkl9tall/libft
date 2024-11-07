@@ -21,7 +21,7 @@ int	ft_atoi(const char *nptr)
 	x = 0;
 	signe = 1;
 	num = 0;
-	while (nptr[x] == '\t' || nptr[x] == ' ')
+	while (nptr[x] == '\t' || nptr[x] == ' ' || (nptr[x] >= 9 && nptr[x] <= 13))
 		x++;
 	if (nptr[x] == '+' || nptr[x] == '-')
 	{
@@ -42,7 +42,7 @@ int	ft_atoi(const char *nptr)
 /*
 int main ()
 {
-	char s1[] = "+-65654";
+	char s1[] = "    65654";
 
 	printf("%d\n",ft_atoi(s1));
 

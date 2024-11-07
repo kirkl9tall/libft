@@ -27,13 +27,11 @@ static int	count(int n)
 
 static char	*printzero()
 {
-	int		x;
 	char	*p;
 
-	x = 0;
 	p = malloc(2);
-	p[x++] = '0';
-	p[x] = '\0';
+	p[0] = '0';
+	p[1] = '\0';
 	return (p);
 }
 

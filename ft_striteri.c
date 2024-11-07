@@ -11,23 +11,17 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+i
+void    ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	x = 0;
-	if (!s || !f)
-		return ;
-	while (s[x])
-	{
-		f(x, &s[x]);
-		x++;
-	}
+        int x;
+
+        if (!s || !f)
+                return;
+        x = 0;
+        while (s[x])
+        {
+                f(x, &s[x]);
+                x++;
+        }
 }
-/*
-int	main(void) {
-	char str[] = "hello world";
-
-	ft_striteri(str, to_upper);
-
-	printf("%s\n", str);
-}*/

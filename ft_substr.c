@@ -19,14 +19,19 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int		y;
 	unsigned int	ls;
 
+	if (!s)
+		return (NULL);
 	ls = ft_strlen((char *)s);
 	x = start;
 	y = 0;
-	if (!s || len == 0)
-		return (NULL);
 	p = malloc(len + 1);
-	if (p == NULL || start >= ls)
+	if (p == NULL)
 		return (NULL);
+	if (start >= ls || len  == 0)
+	{
+		p[0] = '\0';
+		return p;
+	}
 	while (y < len && ((start + y) < ls))
 	{
 		p[y] = s[x];

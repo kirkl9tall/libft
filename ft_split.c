@@ -46,12 +46,10 @@ char	**amar(char const *s, char **p, char c)
 			x++;
 		while (s[x] && s[x] != c)
 		{
-			p[z][y] = s[x];
-			y++;
-			x++;
+			p[z][y++] = s[x++];
 		}
 		p[z][y] = '\0';
-		if (s[x])
+		if (s[x] || p[z])
 			z++;
 		y = 0;
 	}
