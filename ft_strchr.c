@@ -29,7 +29,7 @@ char	*ft_strchr(const char *str, int c)
 	}
 	return (NULL);
 }
-
+/*
 int	main(void)
 {
 	const char	str[] = "Hello guys how are you doing ?";
@@ -41,4 +41,4 @@ int	main(void)
 	printf("%s\n", strchr(str, search));
 	search2 = 'h';
 	printf("%s\n", ft_strchr(str1, search2));
-}
+}*/

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	putnbr_fd(int number, int fd)
+void	ft_putnbr_fd(int number, int fd)
 {
 	int	mod;
 
@@ -22,14 +22,14 @@ void	putnbr_fd(int number, int fd)
 	{
 		mod = number % 10 + 48;
 		number = number / 10;
-		putnbr_fd(number, fd);
+		ft_putnbr_fd(number, fd);
 		write(fd, &mod, 1);
 	}
 	else if (number < 0)
 	{
 		write(fd, "-", 1);
 		number = -number;
-		putnbr_fd(number, fd);
+		ft_putnbr_fd(number, fd);
 	}
 	else if (number <= 9)
 	{

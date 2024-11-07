@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	count_word(char *s, char c)
+int	count_word(char const *s, char c)
 {
 	int	x;
 	int	count;
@@ -31,7 +31,7 @@ int	count_word(char *s, char c)
 	return (count);
 }
 
-char	**amar(char *s, char **p, char c)
+char	**amar(char const *s, char **p, char c)
 {
 	int	x;
 	int	y;
@@ -59,7 +59,7 @@ char	**amar(char *s, char **p, char c)
 	return (p);
 }
 
-void	freealloc(void **p, int y)
+void	freealloc(char **p, int y)
 {
 	while (y > 0)
 	{
@@ -70,7 +70,7 @@ void	freealloc(void **p, int y)
 	return ;
 }
 
-void	allocation(char const *s, void **p, char c)
+void	allocation(char const *s, char **p, char c)
 {
 	int	x;
 	int	y;

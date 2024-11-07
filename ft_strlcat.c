@@ -19,17 +19,21 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	y;
 
 	sd = ft_strlen(dest);
-	ss = ft_strlen(src);
+	ss = ft_strlen((char*)src);
 	y = 0;
-	if (!dest || !src || size == 0)
-		return (sd + ss);
+	if (size < sd)
+		return (size + ss);
+	if (!dest || !src)
+		return (ss + sd);
+	if (size == 0)
+		return (ss);
 	while (src[y] && (sd + y) < size - 1)
 	{
 		dest[sd + y] = src[y];
 		y++;
 	}
 	dest[sd + y] = '\0';
-	return (sd + ss);
+	return (ss + sd);
 }
 /*
 int	main(void)

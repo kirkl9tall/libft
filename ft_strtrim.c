@@ -49,7 +49,7 @@ static int	fin(char const *s1, char const *set)
 	int	z;
 
 	y = 0;
-	z = (ft_strlen(s1) - 1);
+	z = (ft_strlen((char *)s1) - 1);
 	while (z > 0)
 	{
 		while (set[y])

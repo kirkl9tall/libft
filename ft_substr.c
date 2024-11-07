@@ -16,10 +16,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*p;
 	int		x;
-	int		y;
-	int		ls;
+	unsigned int		y;
+	unsigned int	ls;
 
-	ls = ft_strlen(s);
+	ls = ft_strlen((char *)s);
 	x = start;
 	y = 0;
 	if (!s || len == 0)

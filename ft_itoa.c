@@ -25,7 +25,7 @@ static int	count(int n)
 	return (counter);
 }
 
-static char	*printzero(int n)
+static char	*printzero()
 {
 	int		x;
 	char	*p;
@@ -39,13 +39,10 @@ static char	*printzero(int n)
 
 static char	*negative(int n)
 {
-	int		x;
-	int		mod;
 	char	*p;
 	int		null;
 	int		size;
 
-	x = 0;
 	n = -n;
 	size = count(n);
 	p = malloc(size + 2);
@@ -63,13 +60,10 @@ static char	*negative(int n)
 
 static char	*positive(int n)
 {
-	int		x;
-	int		mod;
 	char	*p;
 	int		null;
 	int		size;
 
-	x = 0;
 	size = count(n);
 	p = malloc(size + 1);
 	null = size + 1;
@@ -88,7 +82,6 @@ char	*ft_itoa(int n)
 	int		x;
 	char	*p;
 	char	*p2;
-	int		size;
 
 	if (n == -2147483648)
 	{
@@ -103,11 +96,12 @@ char	*ft_itoa(int n)
 		return (p);
 	}
 	else if (n == 0)
-		return (printzero(n));
+		return (printzero());
 	else if (n < 0)
 		return (negative(n));
 	else if (n > 0)
 		return (positive(n));
+	return (NULL);
 }
 /*
 int	main(void)
