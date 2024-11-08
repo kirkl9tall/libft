@@ -79,9 +79,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	fini = fin(s1, set);
 	sl = fini - deb;
 	if (sl > 0)
+	{
 		p = malloc(fini - deb + 1);
+		if (p == NULL)
+			return (NULL);
+	}
 	else
 	p = malloc(1);
+	if (p == NULL)
+		return (NULL);
 	sl = 0;
 	y = deb;
 	while (y < fini)

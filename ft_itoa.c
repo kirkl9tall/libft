@@ -64,7 +64,7 @@ static char	*positive(int n)
 
 	size = count(n);
 	p = malloc(size + 1);
-	null = size + 1;
+	null = count(n);
 	while (size > 0)
 	{
 		p[size - 1] = n % 10 + 48;
