@@ -30,6 +30,8 @@ static char	*printzero()
 	char	*p;
 
 	p = malloc(2);
+	if (p == NULL)
+		return (NULL);
 	p[0] = '0';
 	p[1] = '\0';
 	return (p);
@@ -44,6 +46,8 @@ static char	*negative(int n)
 	n = -n;
 	size = count(n);
 	p = malloc(size + 2);
+	if (p == NULL)
+		return (NULL);
 	null = size;
 	while (size > 0)
 	{
@@ -64,6 +68,8 @@ static char	*positive(int n)
 
 	size = count(n);
 	p = malloc(size + 1);
+	if (p == NULL)
+		return (NULL);
 	null = count(n);
 	while (size > 0)
 	{
@@ -85,6 +91,8 @@ char	*ft_itoa(int n)
 	{
 		x = 0;
 		p = malloc(12);
+		if (p == NULL)
+			return (NULL);
 		p2 = "-2147483648";
 		while (x < 12)
 		{

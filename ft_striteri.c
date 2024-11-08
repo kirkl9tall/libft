@@ -3,25 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abismail <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sfaouzi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 11:56:49 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/06 11:56:49 by abismail         ###   ########.fr       */
+/*   Created: 2024/11/06 11:58:03 by sfaouzi           #+#    #+#             */
+/*   Updated: 2024/11/06 11:58:03 by sfaouzi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-        int x;
+	int	len;
+	int	i;
 
-        if (!s || !f)
-                return;
-        x = 0;
-        while (s[x])
-        {
-                f(x, &s[x]);
-                x++;
-        }
+	if (!s || !f)
+		return ;
+	len = ft_strlen(s);
+	i = 0;
+	while (i < len)
+	{
+		(*f)(i, &s[i]);
+		i++;
+	}
 }
