@@ -38,7 +38,7 @@ static int	debut(char const *s1, char const *set)
 			else
 				y++;
 		}
-		break ;
+		return (x);
 	}
 	return (x);
 }
@@ -62,7 +62,7 @@ static int	fin(char const *s1, char const *set)
 			else
 				y++;
 		}
-		break ;
+		return(z + 1);
 	}
 	return (z + 1);
 }
@@ -80,6 +80,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	sl = fini - deb;
 	if (sl > 0)
 		p = malloc(fini - deb + 1);
+	else
 	p = malloc(1);
 	sl = 0;
 	y = deb;
