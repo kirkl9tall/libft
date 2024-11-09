@@ -15,7 +15,7 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*p;
-	int				x;
+	unsigned int		x;
 	unsigned int	y;
 	unsigned int	ls;
 
@@ -27,22 +27,23 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	p = malloc(len + 1);
 	if (p == NULL)
 		return (NULL);
-	if (start >= ls || len == 0)
-	{
-		p[0] = '\0';
-		return (p);
-	}
+	        if (start >= ls || len == 0)
+        {
+                p[0] = '\0';
+                return (p);
+        }
 	while (y < len && ((start + y) < ls))
 		p[y++] = s[x++];
 	p[y] = '\0';
 	return (p);
 }
 /*
+#include <stdio.h>
 int main ()
 {
-	char  arr[] = "";
+	char  arr[] = "tripouille";
 	int srart = 8;
 	int len  = 5;
-	printf("%s\n",ft_substr(arr,srart,len));
+	printf("%s\n",ft_substr(arr,srart,-1));
 
 }*/

@@ -23,7 +23,7 @@ char	*ft_strchr(const char *str, int c)
 		return ((char *)(str + y));
 	while (str[x])
 	{
-		if (str[x] == c)
+		if (str[x] == (char)c)
 			return ((char *)str + x);
 		x++;
 	}
