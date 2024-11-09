@@ -25,7 +25,7 @@ static int	count(int n)
 	return (counter);
 }
 
-static char	*printzero()
+static char	*printzero(void)
 {
 	char	*p;
 

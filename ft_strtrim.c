@@ -62,7 +62,7 @@ static int	fin(char const *s1, char const *set)
 			else
 				y++;
 		}
-		return(z + 1);
+		return (z + 1);
 	}
 	return (z + 1);
 }
@@ -85,7 +85,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 			return (NULL);
 	}
 	else
-	p = malloc(1);
+		p = malloc(1);
 	if (p == NULL)
 		return (NULL);
 	sl = 0;
