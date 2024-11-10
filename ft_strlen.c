@@ -6,13 +6,13 @@
 /*   By: abismail <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:56:49 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/06 11:56:49 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/10 10:13:53 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	x;
 

@@ -6,13 +6,13 @@
 /*   By: abismail <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:56:49 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/06 16:55:23 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/10 13:34:50 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_word(char const *s, char c)
+static int	count_word(char const *s, char c)
 {
 	int	x;
 	int	count;
@@ -32,7 +32,17 @@ int	count_word(char const *s, char c)
 	return (count);
 }
 
-char	**amar(char const *s, char **p, char c, int countty)
+static void	freealloc(void **pointer, int y)
+{
+	while (y >= 0)
+	{
+		free(p[y]);
+		y--;
+	}
+	free(p);
+}
+
+static char	**amar(char const *s, char **p, char c, int countty)
 {
 	int	x;
 	int	y;
@@ -59,7 +69,7 @@ char	**amar(char const *s, char **p, char c, int countty)
 	return (p);
 }
 
-void	allocation(char const *s, char **p, char c)
+static void	allocation(char const *s, char **p, char c)
 {
 	int	x;
 	int	y;
@@ -80,6 +90,8 @@ void	allocation(char const *s, char **p, char c)
 		if (w > 0)
 		{
 			p[y] = malloc((w + 1) * sizeof(char));
+			if (!p[y])
+				freealloc(p[y]);
 			y++;
 		}
 		w = 0;

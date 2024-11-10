@@ -6,7 +6,7 @@
 /*   By: abismail <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:56:48 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/06 11:56:48 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/10 10:23:16 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*ptr;
 
+	if (!lst || !new)
+		return (NULL);
 	if (*lst == NULL)
 		*lst = new;
 	else
