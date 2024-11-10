@@ -32,7 +32,7 @@ static int	count_word(char const *s, char c)
 	return (count);
 }
 
-static void	freealloc(void **pointer, int y)
+static void	freealloc(char **p, int y)
 {
 	while (y >= 0)
 	{
@@ -91,7 +91,7 @@ static void	allocation(char const *s, char **p, char c)
 		{
 			p[y] = malloc((w + 1) * sizeof(char));
 			if (!p[y])
-				freealloc(p[y]);
+				freealloc(p, y);
 			y++;
 		}
 		w = 0;
