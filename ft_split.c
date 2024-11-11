@@ -6,7 +6,7 @@
 /*   By: abismail <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:56:49 by abismail          #+#    #+#             */
-/*   Updated: 2024/11/10 13:34:50 by abismail         ###   ########.fr       */
+/*   Updated: 2024/11/11 11:37:43 by abismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ static void	allocation(char const *s, char **p, char c)
 		{
 			p[y] = malloc((w + 1) * sizeof(char));
 			if (!p[y])
-				freealloc(p, y);
+				freealloc(p, y - 1);
 			y++;
 		}
 		w = 0;
